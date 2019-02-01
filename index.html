@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css --> 
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <title>Blaze Sales Group</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="./index.html"><img src="img/blaze.jpg" height="30" width="41"></a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./manufacturer.html"><span class="fa fa-building-o fa-lg"></span> Manufacturers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul> 
+                <!-- Future feature 
+                <span class="navbar-text">
+                    <a id="btnLogin" class="btn">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span> -->
+            </div>            
+        </div>
+    </nav>
+    
+    <!-- Login Modal - Future feature -->
+   
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="userEmailAddress">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="userPassword">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Feedback modal - Future feature -->
+    <div id="feedbackModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">               
+                    <dl class="row">
+                        <dt class="col-sm-2">Type of Business</dt>
+                        <dd class="col-sm-6">
+                            <div class="form-check form-check-inline"> 
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="optRetail" value="optRetail">
+                                <label class="form-check-label" for="optRetail">Retail</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="optManufacturer" value="optManufacturer">
+                                <label class="form-check-label" for="optManufacturer">Manufacturer</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="optDistributor" value="optDistributor">
+                                <label class="form-check-label" for="optDistributor">Distributor</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="optOther" value="optOther">
+                                <label class="form-check-label" for="optOther">Other</label>
+                            </div>
+                        </dd> 
+                    </dl>
+                    <dl class="row">
+                            <dt class="col-sm-2">Section</dt>
+                            <dd class="col-sm-3">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success btn-sm active">
+                                        <input type="radio" name="options" id="btnYes" autocomplete="off" checked>Yes
+                                    </label>
+                                    <label class="btn btn-danger btn-sm">
+                                        <input type="radio" name="options" id="btnNo" autocomplete="off"> No
+                                    </label>
+                                </div>
+                                </dd>   
+                        </dl>
+                    <dl class="row">
+                        <dt class="col-sm-2">Date and Time</dt>
+                        <dd class="col-sm-3"><input type="text" class="form-control" id="date" name="date" placeholder="Date"></dd>
+                        <dd class="col-sm-3"><input type="text" class="form-control" id="time" name="time" placeholder="Time"></dd>
+                    </dl>
+                    <dl class="row">
+                        <dt class="col-sm-2"></dt>
+                        <dd class="col-sm-3">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Reserve</button>    
+                        </dd>    
+                    </dl>
+                </div> 
+            </div>
+        </div>   
+    </div> 
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm align-self-center">
+                        <img src="img/blaze.jpg" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-6">
+                    <h1>Blaze Sales Group</h1>
+                    <p>Blaze Sales Group represents manufacturers in the sporting goods industry with the highest standards of quality.</p>
+                </div>
+                
+                <!-- Future feature
+                <div class="col-12 col-sm align-self-center">
+                        <a role="button" class="btn btn-block nav-link btn-warning"
+                        id="btnFeedback">Reserve Table</a>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row row-content d-none d-sm-block">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img class=" img-fluid "
+                                src="img/hunting.jpg" alt="dogbird">
+                            <div class="carousel-caption ">
+                                <h4 class="bg-dark">Outdoor Sporting Manufacturers</h4>
+                                <p class="d-none d-sm-block bg-dark">At Blaze Sales Group we represent outdoor sporting products including firearms and crossbows.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/fishing.jpg" alt="fishing">
+                            <div class="carousel-caption ">
+                                <h4>Fishing manufacturers</h4>
+                                <p class="d-none d-sm-block">At Blaze Sales Group we represent fishing equipment manufacturers.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid"
+                                src="img/training.jpg" alt="training">
+                            <div class="carousel-caption ">
+                                <h4 class="bg-dark">Training </h4>
+                                <p class="d-none d-sm-block  bg-dark">We offer Sales Training, Product Training, In-Store Promotions, Distributor Promotions and more. Please contact us for more information. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>  
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-4"> 
+                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                    src="img/hunting.jpg" alt="crossbow">
+            </div>    
+            <div class="col-sm-12 col-md-8">
+                <h2>Outdoor Sporting Products </h2>
+                <p>We represent outdoor sporting product manufacturers ranging from firearms manufacturers to fishing product manufacturers. Please contact us for more information.</p>
+            </div>
+        </div>
+
+        <div class="row row-content align-items-center">
+            <div class="col-sm-4 col-md-4"> 
+                <img class="d-flex mr-3 img-thumbnail align-self-center"
+                    src="/img/training.png" alt="smalltraining">
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <h2> Training </h2>
+                <p>We offer an assortment of services including Sales Training, Product Training, In-Store Promotions and Distributor Promotions</p>
+            </div>
+        </div>
+    </div>    
+
+    <footer class="footer">
+            <div class="container">
+                    <div class="row">             
+                        <div class="col-4 offset-1 col-sm-3">
+                            <h5>Links</h5>
+                            <ul class="list-unstyled">
+                                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-home fa-sm"></span> Home</a></li>
+                                    <li class="nav-item active"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-sm"></span> About</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./manufacturer.html"><span class="fa fa-list fa-sm"></span> Manufacturers</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-sm"></span> Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 col-sm-5">
+                            <h5>Our Address</h5>
+                            <address>
+                                Pendergrass, GA<br>
+                                <i class="fa fa-phone fa-lg"></i>: 770-378-2377<br>
+                                <i class="fa fa-envelope fa-lg"></i>: 
+                                <a href="mailto:">info@blazesalesgroup.com</a>
+                            </address>
+                        </div>
+                        <div class="col-12 col-sm-4 align-self-center">
+                            <div class="text-center">
+                                <!--<a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                                <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>-->
+                                <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/group_blaze"><i class="fa fa-twitter"></i></a>
+                                <!--<a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>-->
+                                <a class="btn btn-social-icon" href="mailto:rdavidson@blazesalesgroup.com"><i class="fa fa-envelope-o"></i></a>
+                            </div>
+                        </div>
+                   </div>
+                   <div class="row justify-content-center">             
+                        <div class="col-auto">
+                            <p>© Copyright 2019 Blaze Sales Group, LLC</p>
+                        </div>
+                   </div>
+                </div>
+    </footer>
+
+     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+     <!-- build:js js/main.js --> 
+     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="js/script.js"></script>
+     <!-- endbuild -->
+</body>
+
+</html>

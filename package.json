@@ -1,0 +1,42 @@
+{
+  "name": "PeakSoftwareSolutions",
+  "version": "1.0.0",
+  "description": "Peak Software Solutions website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/brett0701/peaksoftwaresolutions.git"
+  },
+  "author": "Brett Davidson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brett0701/peaksoftwaresolutions/issues"
+  },
+  "homepage": "https://github.com/brett0701/peaksoftwaresolutions#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-flatmap": "^1.0.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-usemin": "^0.3.29",
+    "lite-server": "^2.4.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
